@@ -70,6 +70,12 @@ html {
   }
 }
 
+/* Sidebar images */
+.sidebar img.inline {
+  display: inline;
+  margin: 0px;
+}
+
 /* Sidebar links */
 .sidebar a {
   color: #fff;

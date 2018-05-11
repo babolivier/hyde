@@ -10,16 +10,33 @@
 
   {{ if .IsHome -}}
   <title>{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta property="og:title" content="{{ .Site.Title }}" />
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <meta property="og:type" content="website" />
   {{- else -}}
   <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Description }}" />
+  <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}" />
+  <meta property="og:description" content="{{ .Description }}" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ .PublishDate }}" />
   {{- end }}
+  {{ if .Params.thumbnail -}}
+  <meta property="og:image" content="{{ .Site.BaseURL }}images{{ .Params.thumbnail }}"/>
+  {{- end }}
+  <meta name="author" content="{{ .Site.Params.author }}" />
+  <meta name="identifier-url" content="{{ .Site.BaseURL }}" />
+  <meta property="og:site_name" content="{{ .Site.Title }}"/>
+  <meta property="og:url" content="{{ .Permalink }}"/>
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/print.css" media="print">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/poole.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/hyde.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fonts/font.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome-all.min.css">
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
