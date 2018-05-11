@@ -18,6 +18,6 @@
       {{- end }}
     </ul>
 
-    <p>{{ with .Site.Params.creativeCommons }}<a href="https://creativecommons.org/licenses/{{ . }}/4.0/"><img src="https://licensebuttons.net/l/{{ . }}/4.0/80x15.png" alt="CC {{.}}" class="inline" /></a>{{ end }}  {{ .Site.Params.author }}</p>
+    <p><a href="https://creativecommons.org/licenses/{{ .Site.Params.creativeCommons }}/4.0/"><img src="{{ .Site.BaseURL}}/images/cc/{{ .Site.Params.creativeCommons }}.png" alt="CC {{ .Site.Params.creativeCommons }}" class="inline" /></a> {{ .Site.Params.author }}</p>
   </div>
 </div>
