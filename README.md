@@ -184,7 +184,6 @@ This is a fork of the Hyde theme I (Brendan Abolivier) made containing a few cha
 | email             | Email address                                                     | hello@brendanabolivier.com                        |
 | pgp               | PGP key fingerprint                                               | E1D4 B745 7A82 9D77 1FBA 8CAC E860 1572 74A2 8D7E |
 | keyserver         | The key server to use in the key's menu link (must support HTTPS) | pgp.key-server.io                                 |
-| creativeCommons   | The Creative Commons license                                      | by-sa                                             |
 
 * Replacing the `copyright` key in the `params` section from the configuration file with a `creativeCommons` key, expected to be a Creative Commons license identifier (such as `by`, `by-sa`, etc.)
 * Adding a proper RSS feed template including items' descriptions in `<description>` tags, and their contents in `<content:encoded>` tags
