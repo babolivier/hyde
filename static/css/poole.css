@@ -175,6 +175,9 @@ pre code {
   color: inherit;
   background-color: transparent;
 }
+a code {
+  color: #268bd2;
+}
 .highlight {
   margin-bottom: 1rem;
   border-radius: 4px;
