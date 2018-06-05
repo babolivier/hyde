@@ -81,6 +81,11 @@ html {
   color: #fff;
 }
 
+/* Sidebar small text */
+.sidebar p.small {
+  font-size: 80%;
+}
+
 /* About section */
 .sidebar-about h1 {
   color: #fff;

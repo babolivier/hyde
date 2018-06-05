@@ -1,7 +1,7 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}images/logo.png" /></a>
+	    <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.BaseURL }}images/logo.png" alt="{{ .Site.Title }} logo" /></a>
       <p class="lead">
       {{ with .Site.Params.description }} {{.}} {{ else }}An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.{{end}}
       </p>
@@ -11,6 +11,7 @@
       <li><i class="fas fa-home"></i> <a href="{{ .Site.BaseURL }}">Home</a> </li>
       <li><i class="fas fa-rss-square"></i> <a href="{{ .Site.RSSLink }}">RSS Feed</a></li>
       <li><i class="fab fa-twitter-square"></i> <a href="https://twitter.com/{{ .Site.Params.twitter }}">{{ .Site.Params.twitter }}</a></li>
+      <li><i class="fab fa-mastodon"></i> <a href="https://{{ .Site.Params.mastodon.instance }}/@{{ .Site.Params.mastodon.username }}">{{ .Site.Params.mastodon.username }}</a></li>
       <li><i class="fab fa-github-square"></i> <a href="https://github.com/{{ .Site.Params.github }}">{{ .Site.Params.github }}</a></li>
       <li><i class="fas fa-envelope"></i> <a href=mailto:{{ .Site.Params.email }}>{{ .Site.Params.email }}</a></li>
       <li><i class="fas fa-key"></i> <a href="https://{{ .Site.Params.keyserver }}/pks/lookup?op=get&search=0x{{ replace .Site.Params.pgp " " "" }}">{{ .Site.Params.pgp }}</a></li>
@@ -20,5 +21,7 @@
     </ul>
 
     <p><a href="https://creativecommons.org/licenses/{{ .Site.Params.creativeCommons }}/4.0/"><img src="{{ .Site.BaseURL}}images/cc/{{ .Site.Params.creativeCommons }}.png" alt="CC {{ .Site.Params.creativeCommons }}" class="inline" /></a> {{ .Site.Params.author }}</p>
+
+    <p class="small">Built with <a href="https://gohugo.io/">Hugo</a>, powered by <a href="https://github.com/babolivier/hyde">Hyde</a></p>
   </div>
 </div>
