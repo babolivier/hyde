@@ -1,7 +1,7 @@
 {{ define "main" -}}
 <div class="posts">
-{{ range .Data.Pages -}}
-<div class="post">
+{{ range .Site.RegularPages -}}
+<article class="post">
   <h1 class="post-title">
     <a href="{{ .Permalink }}">{{ .Title }}</a>
   </h1>
@@ -12,7 +12,7 @@
     <a href="{{ .RelPermalink }}">Read More…</a>
   </div>
   {{ end }}
-</div>
+</article>
 {{- end }}
 </div>
 {{- end }}
