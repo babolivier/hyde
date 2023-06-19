@@ -9,13 +9,14 @@
 
     <nav>
         <ul class="sidebar-nav">
-          <li><i class="fas fa-home"></i> <a rel="me" href="{{ .Site.BaseURL }}">Home</a> </li>
-          <li><i class="fas fa-rss-square"></i> <a rel="me" href="{{ .Site.RSSLink }}">RSS Feed</a></li>
-          <li><i class="fab fa-twitter-square"></i> <a rel="me" href="https://twitter.com/{{ .Site.Params.twitter }}">{{ .Site.Params.twitter }}</a></li>
-          <li><i class="fab fa-mastodon"></i> <a rel="me" href="https://{{ .Site.Params.mastodon.instance }}/@{{ .Site.Params.mastodon.username }}">{{ .Site.Params.mastodon.username }}</a></li>
-          <li><i class="fab fa-github"></i> <a rel="me" href="{{ .Site.Params.git.url }}">{{ .Site.Params.git.username }}</a></li>
-          <li><i class="fas fa-envelope"></i> <a rel="me" href=mailto:{{ .Site.Params.email }}>{{ .Site.Params.email }}</a></li>
-          <li><i class="fas fa-key"></i> <a rel="me" href="https://{{ .Site.Params.keyserver }}/pks/lookup?op=get&search=0x{{ replace .Site.Params.pgp " " "" }}">{{ .Site.Params.pgp }}</a></li>
+          <li><i class="fa fa-home"></i> <a rel="me" href="{{ .Site.BaseURL }}">Home</a> </li>
+          <li><i class="fa fa-rss-square"></i> <a rel="me" href="{{ .Site.RSSLink }}">RSS Feed</a></li>
+          <li><i class="fa fa-github"></i> <a rel="me" href="{{ .Site.Params.git.url }}">{{ .Site.Params.git.username }}</a></li>
+          <li><i class="fa fa-twitter-square"></i> <a rel="me" href="https://twitter.com/{{ .Site.Params.twitter }}">{{ .Site.Params.twitter }}</a></li>
+          <li><i class="fa fa-mastodon"></i> <a rel="me" href="https://{{ .Site.Params.mastodon.instance }}/@{{ .Site.Params.mastodon.username }}">@{{ .Site.Params.mastodon.username }}@{{ .Site.Params.mastodon.instance }}</a></li>
+          <li><i class="fa fa-envelope"></i> <a rel="me" href=mailto:{{ .Site.Params.email }}>{{ .Site.Params.email }}</a></li>
+          <li><i class="fa fa-matrix-org"></i> <a rel="me" href="https://matrix.to/#/{{ .Site.Params.matrix }}">{{ .Site.Params.matrix }}</a></li>
+          <li><i class="fa fa-key"></i> <a rel="me" href="https://{{ .Site.Params.keyserver }}/pks/lookup?op=get&search=0x{{ replace .Site.Params.pgp " " "" }}">{{ .Site.Params.pgp }}</a></li>
           {{ range .Site.Menus.main -}}
             <li><a href="{{.URL}}"> {{ .Name }} </a></li>
           {{- end }}
