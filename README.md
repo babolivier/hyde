@@ -225,23 +225,16 @@ Open sourced under the [MIT license](LICENSE.md).
 This is a fork of the Hyde theme I (Brendan Abolivier) made containing a few changes I made:
 
 * Getting rid of Google Fonts
-* Adding FontAwesome
+* Adding [Fork Awesome](https://forkaweso.me/Fork-Awesome/)
 * Adding meta tags for social network sharing and kind of SEO
 * Adding an `author` key in the `params` section from the configuration file
-* Adding special links to the sidebar menu using values from the `params` section in the configuration file:
-
-| Configuration key | Description                                                       | Example value                                     |
-|-------------------|-------------------------------------------------------------------|---------------------------------------------------|
-| twitter           | Twitter @username                                                 | BrenAbolivier                                     |
-| github            | GitHub username                                                   | babolivier                                        |
-| email             | Email address                                                     | hello@brendanabolivier.com                        |
-| pgp               | PGP key fingerprint                                               | E1D4 B745 7A82 9D77 1FBA 8CAC E860 1572 74A2 8D7E |
-| keyserver         | The key server to use in the key's menu link (must support HTTPS) | pgp.key-server.io                                 |
-
+* Adding special links to the sidebar menu using values from the `params` section in the configuration file
 * Replacing the `copyright` key in the `params` section from the configuration file with a `creativeCommons` key, expected to be a Creative Commons license identifier (such as `by`, `by-sa`, etc.)
 * Adding a proper RSS feed template including items' descriptions in `<description>` tags, and their contents in `<content:encoded>` tags
 * Adding support for posts' thumbnails, by supporting a `thumbnail` key in a post's front matter. Note that this value must not contain the `https://myblog.tld/images` part of the image's URL, which is added automatically before the key's value.
 
-Note that none of the configuration parameters I added are optional (mainly because I don't need them to be, but PRs are welcome!). A live demo is available [on my blog](https://brendan.abolivier.bzh).
+See the [live configuration file](https://github.com/babolivier/brendan.abolivier.bzh/blob/master/config.yaml) for examples on how to use these features.
+
+Note that none of the configuration parameters I added are optional (because I don't need them to be). A live demo is available [on my blog](https://brendan.abolivier.bzh).
 
 Of course, everything I didn't mess with belongs to the Hugo Hyde theme's authors and contributor.
